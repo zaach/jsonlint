@@ -1,78 +1,59 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8" /> 
+    <title>JSON Lint</title> 
+    <script src="json2.js"></script>
+    <script src="jsonlint.js"></script>
+    <script>
+      window.onload = function () {
+        document.getElementById("button").onclick = function () {
+          try {
+            var result = jsonlint.parse(document.getElementById("source").value);
+            if (result) {
+              document.getElementById("result").innerHTML = "JSON is valid!";
+              document.getElementById("result").className = "pass";
+              if (document.getElementById("reformat").checked) {
+                document.getElementById("source").value = JSON.stringify(result, null, "  ");
+              }
+            }
+          } catch(e) {
+            document.getElementById("result").innerHTML = e;
+            document.getElementById("result").className = "fail";
+          }
+        };
+      }
+    </script>
+    <style>
+      body {font-family: sans-serif;}
+      #result {
+        padding: 1em;
+      }
+      .pass {
+        background-color: #efe;
+        color: #393;
+        border: 2px solid #393;
+      }
+      .fail {
+        background-color: #fee;
+        color: #933;
+        border: 2px solid #933;
+      }
+      textarea { width: 100%; }
+    </style>
+</head> 
+<body> 
+  <h1>JSON Lint</h1> 
+  <p>A pure JavaScript version of the service provided at <a href="http://jsonlint.com/">jsonlint.com</a>.</p>
+  <textarea id="source" rows="20" cols="50">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-	<title>zaach/jsonlint @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #a7c19f;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #583e60; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #583e60; }
-    h3 { text-align: center; color: #583e60; }
-    a { color: #583e60; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
-</head>
-
-<body>
-  <a href="http://github.com/zaach/jsonlint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/zaach/jsonlint/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/zaach/jsonlint/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="http://github.com/zaach/jsonlint">jsonlint</a>
-      <span class="small">by <a href="http://github.com/zaach">zaach</a></span></h1>
-
-    <div class="description">
-      A pure JavaScript version of jsonlint.com
-    </div>
-
-    <h2>Contact</h2>
-<p>Zach Carter (zack.carter@gmail.com)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/zaach/jsonlint/zipball/master">zip</a> or
-      <a href="http://github.com/zaach/jsonlint/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/zaach/jsonlint</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/zaach/jsonlint">zaach/jsonlint</a>
-    </div>
-
-  </div>
-
-  
-</body>
-</html>
+  </textarea>
+  <p>
+    <button id="button">Validate</button>
+    <input type="checkbox" value="yes" id="reformat" /><label for="reformat">reformat JSON</label>
+  </p>
+  <h2>Results</h2>
+  <pre id="result"></pre>
+  <p><a href="http://github.com/zaach/jsonlint">project on github</a></p> 
+</body> 
+</html> 
