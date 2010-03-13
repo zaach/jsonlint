@@ -1,0 +1,14 @@
+{
+  "name": "jsonlint",
+  "author": "Zach Carter",
+  "email": "zach@carter.name",
+  "keywords": [
+      "jsonlint",
+      "json",
+      "parser",
+      "lint"
+  ],
+  "githubName": "jsonlint",
+  "type": "zip",
+  "location": "http://github.com/zaach/jsonlint/zipball/master"
+}
