@@ -1,6 +1,4 @@
-#!/usr/bin/env narwhal
-
-var fs = require("file"),
+var fs = require("fs"),
     assert = require("assert"),
     parser = require("../lib/jsonlint").parser;
 
@@ -20,4 +18,4 @@ exports["test string with line break"] = function () {
 };
 
 if (require.main === module)
-    require("os").exit(require("test").run(exports));
+    require("test").run(exports);

@@ -1,14 +1,30 @@
 {
+  "author": "Zach Carter <zach@carter.name> (http://zaa.ch)",
   "name": "jsonlint",
-  "author": "Zach Carter",
-  "email": "zach@carter.name",
-  "keywords": [
-      "jsonlint",
-      "json",
-      "parser",
-      "lint"
-  ],
-  "githubName": "jsonlint",
-  "type": "zip",
-  "location": "http://github.com/zaach/jsonlint/zipball/master"
+  "description": "Validate JSON",
+  "keywords": ["json", "validation", "lint", "jsonlint"],
+  "version": "1.0.0",
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zaach/jsonlint.git"
+  },
+  "bugs": {
+    "web": "http://github.com/zaach/jsonlint/issues"
+  },
+  "main": "lib/jsonlint.js",
+  "bin": "lib/cli.js",
+  "engines": {
+    "node": "0.4 || 0.5"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "test": "*",
+    "jison": "*",
+    "uglify-js": "*"
+  },
+  "scripts": {
+    "test": "node test/all-tests.js"
+  },
+  "homepage": "http://zaach.github.com/jsonlint/"
 }
