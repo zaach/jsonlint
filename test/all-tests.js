@@ -102,11 +102,6 @@ exports["test illegal backslash escape \\x"] = function () {
   assert["throws"](function () {parser.parse(json)}, "should throw error");
 };
 
-exports["test too deep"] = function () {
-  var json = fs.readFileSync(__dirname + "/fails/18.json").toString();
-  assert["throws"](function () {parser.parse(json)}, "should throw error");
-};
-
 exports["test missing colon"] = function () {
   var json = fs.readFileSync(__dirname + "/fails/19.json")
   assert["throws"](function () {parser.parse(json)}, "should throw error");
