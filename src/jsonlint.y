@@ -35,9 +35,9 @@ JSONBooleanLiteral
     ;
 
 JSONText
-    : JSONObject
+    : JSONObject EOF
         {return $$ = $1;}
-    | JSONArray
+    | JSONArray EOF
         {return $$ = $1;}
     ;
 
