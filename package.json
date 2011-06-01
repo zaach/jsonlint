@@ -24,7 +24,9 @@
   "engines": {
     "node": "0.4 || 0.5"
   },
-  "dependencies": {},
+  "dependencies": {
+    "nomnom": ">= 0.4.3"
+  },
   "devDependencies": {
     "test": "*",
     "jison": "*",
