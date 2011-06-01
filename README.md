@@ -18,6 +18,19 @@ or pipe input into stdin:
 
 jsonlint will either report a syntax error with details or pretty print the source if it is valid.
 
+### Options
+
+    $ jsonlint -h
+    Usage: jsonlint <file> [options]
+
+    <file>		file to parse; otherwise uses stdin
+
+    options:
+    -v, --version		print version and exit
+    -s, --sort-keys		sort object keys
+    -i, --in-place		overwrite the file
+    -t CHAR, --indent CHAR		character(s) to use for indentation
+
 ## Module interface
 
 I'm not sure why you wouldn't use the built in `JSON.parse` but you can use jsonlint from a CommonJS module:
