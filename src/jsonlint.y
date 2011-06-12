@@ -1,5 +1,5 @@
 
-/* 
+/*
   ECMA-262 5th Edition, 15.12.1 The JSON Grammar.
   Modified to forbid top level primitives.
 */
@@ -35,25 +35,17 @@ JSONBooleanLiteral
     ;
 
 JSONText
-    : JSONObject EOF
-        {return $$ = $1;}
-    | JSONArray EOF
+    : JSONValue EOF
         {return $$ = $1;}
     ;
 
 JSONValue
     : JSONNullLiteral
-        {$$ = $1;}
     | JSONBooleanLiteral
-        {$$ = $1;}
     | JSONString
-        {$$ = $1;}
     | JSONNumber
-        {$$ = $1;}
     | JSONObject
-        {$$ = $1;}
     | JSONArray
-        {$$ = $1;}
     ;
 
 JSONObject

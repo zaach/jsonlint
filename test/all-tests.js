@@ -17,9 +17,24 @@ exports["test string with line break"] = function () {
     assert["throws"](function () {parser.parse(json)}, "should throw error");
 };
 
-exports["test a json payload should be an object or array not a string"] = function () {
-  var json = fs.readFileSync(__dirname + "/fails/1.json").toString();
-  assert["throws"](function () {parser.parse(json)}, "should throw error");
+exports["test string literal"] = function () {
+    var json = '"foo"';
+    assert.equal(parser.parse(json), "foo");
+};
+
+exports["test number literal"] = function () {
+    var json = '1234';
+    assert.equal(parser.parse(json), 1234);
+};
+
+exports["test null literal"] = function () {
+    var json = '1234';
+    assert.equal(parser.parse(json), 1234);
+};
+
+exports["test boolean literal"] = function () {
+    var json = 'true';
+    assert.equal(parser.parse(json), true);
 };
 
 exports["test unclosed array"] = function () {
