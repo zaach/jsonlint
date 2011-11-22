@@ -8,7 +8,7 @@
     "lint",
     "jsonlint"
   ],
-  "version": "1.2.0",
+  "version": "1.2.1",
   "preferGlobal": true,
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "jsonlint": "lib/cli.js"
   },
   "engines": {
-    "node": "0.4 || 0.5 || 0.6"
+    "node": ">= 0.6"
   },
   "dependencies": {
     "nomnom": ">= 0.4.3"
