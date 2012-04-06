@@ -25,7 +25,7 @@
     "node": ">= 0.6"
   },
   "dependencies": {
-    "nomnom": ">= 0.4.3"
+    "nomnom": ">= 1.x.x"
   },
   "devDependencies": {
     "test": "*",
