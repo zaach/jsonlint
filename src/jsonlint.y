@@ -1,7 +1,5 @@
-
 /*
   ECMA-262 5th Edition, 15.12.1 The JSON Grammar.
-  Modified to forbid top level primitives.
 */
 
 
