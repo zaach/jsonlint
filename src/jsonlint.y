@@ -12,7 +12,7 @@
 
 JSONString
     : STRING
-        {$$ = yytext;}
+        {$$ = yytext.replace(/\\\\/g, "\\");}
     ;
 
 JSONNumber

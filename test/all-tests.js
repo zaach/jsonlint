@@ -7,6 +7,11 @@ exports["test object"] = function () {
     assert.deepEqual(parser.parse(json), {"foo": "bar"});
 };
 
+exports["test escaped backslash"] = function () {
+    var json = '{"foo": "\\\\"}';
+    assert.deepEqual(parser.parse(json), {"foo": "\\"});
+};
+
 exports["test string with escaped line break"] = function () {
     var json = '{"foo": "bar\\nbar"}';
     assert.deepEqual(parser.parse(json), {"foo": "bar\\nbar"});
