@@ -41,6 +41,11 @@ I'm not sure why you wouldn't use the built in `JSON.parse` but you can use json
 
 It returns the parsed object or throws an `Error`.
 
+## Vim Plugins
+
+* [Syntastic](http://www.vim.org/scripts/script.php?script_id=2736)
+* [sourcebeautify](http://www.vim.org/scripts/script.php?script_id=4079) 
+
 ## MIT License
 
 Copyright (C) 2012 Zachary Carter
