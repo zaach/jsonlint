@@ -1,12 +1,9 @@
+%start JSONText
+
 /*
   ECMA-262 5th Edition, 15.12.1 The JSON Grammar.
 */
 
-
-/* author: Zach Carter */
-
-
-%start JSONText
 
 %%
 
