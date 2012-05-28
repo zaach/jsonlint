@@ -9,7 +9,7 @@ frac  "."[0-9]+
 \"(?:'\\'[\\"bfnrt/]|'\\u'[a-fA-F0-9]{4}|[^\\\0-\x09\x0a-\x1f"])*\"    yytext = yytext.substr(1,yyleng-2); return 'STRING'
 
 "{"      return '{'
-"}"      return ''
+"}"      return '}'
 "["      return '['
 "]"      return ']'
 ","      return ','

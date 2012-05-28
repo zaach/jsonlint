@@ -9,7 +9,15 @@
 
 JSONString
     : STRING
-        {$$ = yytext.replace(/\\\\/g, "\\");}
+        { // replace escaped characters with actual character
+          $$ = yytext.replace(/\\(\\|")/g, "$"+"1")
+                     .replace(/\\n/g,'\n')
+                     .replace(/\\r/g,'\r')
+                     .replace(/\\t/g,'\t')
+                     .replace(/\\v/g,'\v')
+                     .replace(/\\f/g,'\f')
+                     .replace(/\\b/g,'\b');
+        }
     ;
 
 JSONNumber

@@ -12,9 +12,20 @@ exports["test escaped backslash"] = function () {
     assert.deepEqual(parser.parse(json), {"foo": "\\"});
 };
 
+exports["test escaped chars"] = function () {
+    var json = '{"foo": "\\\\\\\""}';
+    assert.deepEqual(parser.parse(json), {"foo": '\\\"'});
+};
+
+exports["test escaped \\n"] = function () {
+    var json = '{"foo": "\\\\\\n"}';
+    assert.deepEqual(parser.parse(json), {"foo": '\\\n'});
+};
+
 exports["test string with escaped line break"] = function () {
     var json = '{"foo": "bar\\nbar"}';
-    assert.deepEqual(parser.parse(json), {"foo": "bar\\nbar"});
+    assert.deepEqual(parser.parse(json), {"foo": "bar\nbar"});
+    assert.equal(JSON.stringify(parser.parse(json)).length, 18);
 };
 
 exports["test string with line break"] = function () {
