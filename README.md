@@ -22,19 +22,20 @@ jsonlint will either report a syntax error with details or pretty print the sour
 
     $ jsonlint -h
 
-    usage: jsonlint <file> [options]
+    Usage: jsonlint [file] [options]
 
     file     file to parse; otherwise uses stdin
 
-    options:
+    Options:
        -v, --version            print version and exit
        -s, --sort-keys          sort object keys
        -i, --in-place           overwrite the file
-       -t CHAR, --indent CHAR   character(s) to use for indentation
+       -t CHAR, --indent CHAR   character(s) to use for indentation  [  ]
        -c, --compact            compact error display
        -V, --validate           a JSON schema to use for validation
-       -e, --environment        which specification of JSON Schema the validation file uses
-       -q, --quiet              do not print the parsed json to STDOUT
+       -e, --environment        which specification of JSON Schema the validation file uses  [json-schema-draft-03]
+       -q, --quiet              do not print the parsed json to STDOUT  [false]
+       -p, --pretty-print       force pretty printing even if invalid
 
 
 ## Module interface
