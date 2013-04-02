@@ -34,6 +34,7 @@ jsonlint will either report a syntax error with details or pretty print the sour
        -c, --compact            compact error display
        -V, --validate           a JSON schema to use for validation
        -e, --environment        which specification of JSON Schema the validation file uses
+       -q, --quiet              do not print the parsed json to STDOUT
 
 
 ## Module interface
