@@ -2,9 +2,9 @@
 all: build test site
 
 build:
-	jison src/jsonlint.y src/jsonlint.l
+	./node_modules/jison/lib/cli.js src/jsonlint.y src/jsonlint.l
 	mv jsonlint.js lib/jsonlint.js
-	node scripts/bundle.js | uglifyjs > web/jsonlint.js
+	node scripts/bundle.js | ./node_modules/uglify-js/bin/uglifyjs > web/jsonlint.js
 
 site:
 	cp web/jsonlint.js ../jsonlint-pages/jsonlint.js
