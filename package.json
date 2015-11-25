@@ -37,5 +37,6 @@
     "test": "node test/all-tests.js"
   },
   "homepage": "http://zaach.github.com/jsonlint/",
-  "optionalDependencies": {}
+  "optionalDependencies": {},
+  "license": "MIT"
 }
