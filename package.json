@@ -8,7 +8,7 @@
     "lint",
     "jsonlint"
   ],
-  "version": "1.6.2",
+  "version": "1.7.0",
   "preferGlobal": true,
   "repository": {
     "type": "git",
