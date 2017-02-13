@@ -53,9 +53,15 @@ JSONValue
 
 JSONObject
     : '{' '}'
-        {{$$ = {};}}
+        {$$ = {}; Object.defineProperty($$, '__line__', {
+            value: @$.first_line,
+            enumerable: false
+        })}
     | '{' JSONMemberList '}'
-        {$$ = $2;}
+        {$$ = $2; Object.defineProperty($$, '__line__', {
+            value: @$.first_line,
+            enumerable: false
+        })}
     ;
 
 JSONMember
@@ -72,9 +78,15 @@ JSONMemberList
 
 JSONArray
     : '[' ']'
-        {$$ = [];}
+        {$$ = []; Object.defineProperty($$, '__line__', {
+            value: @$.first_line,
+            enumerable: false
+        })}
     | '[' JSONElementList ']'
-        {$$ = $2;}
+        {$$ = $2; Object.defineProperty($$, '__line__', {
+            value: @$.first_line,
+            enumerable: false
+        })}
     ;
 
 JSONElementList
