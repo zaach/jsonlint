@@ -52,6 +52,7 @@ It returns the parsed object or throws an `Error`.
 
 * [Syntastic](http://www.vim.org/scripts/script.php?script_id=2736)
 * [sourcebeautify](http://www.vim.org/scripts/script.php?script_id=4079) 
+* [Asynchronous Lint Engine (ALE)](https://github.com/w0rp/ale)
 
 ## MIT License
 
