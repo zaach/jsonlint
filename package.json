@@ -9,6 +9,7 @@
     "jsonlint"
   ],
   "version": "1.6.2",
+  "license": "MIT",
   "preferGlobal": true,
   "repository": {
     "type": "git",
