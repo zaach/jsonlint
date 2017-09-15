@@ -8,6 +8,7 @@
     "lint",
     "jsonlint"
   ],
+  "license": "MIT",
   "version": "1.6.2",
   "preferGlobal": true,
   "repository": {
