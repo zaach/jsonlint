@@ -15,3 +15,4 @@ deploy: site
 test: lib/jsonlint.js test/all-tests.js
 	node test/all-tests.js
 
+.PHONY: build site deploy test
