@@ -1,4 +1,4 @@
-JSON Lint
+JSON Lint [![Build Status](https://travis-ci.org/paulvollmer/jsonlint.svg?branch=master)](https://travis-ci.org/paulvollmer/jsonlint)
 =========
 
 A pure [JavaScript version](http://zaach.github.com/jsonlint/) of the service provided at [jsonlint.com](http://jsonlint.com).
@@ -51,7 +51,7 @@ It returns the parsed object or throws an `Error`.
 ## Vim Plugins
 
 * [Syntastic](http://www.vim.org/scripts/script.php?script_id=2736)
-* [sourcebeautify](http://www.vim.org/scripts/script.php?script_id=4079) 
+* [sourcebeautify](http://www.vim.org/scripts/script.php?script_id=4079)
 
 ## MIT License
 

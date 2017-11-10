@@ -1,0 +1,21 @@
+sudo: required
+language: node_js
+node_js:
+  - "8"
+  - "7"
+  - "6"
+  - "5"
+  - "4"
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+notifications:
+  email: false
+script:
+  - make build
+  - make test
