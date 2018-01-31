@@ -25,8 +25,8 @@
     "node": ">= 0.6"
   },
   "dependencies": {
-    "nomnom": ">= 1.5.x",
-    "JSV": ">= 4.0.x"
+    "JSV": "^4.0.2",
+    "commander": "^2.13.0"
   },
   "devDependencies": {
     "test": "*",
