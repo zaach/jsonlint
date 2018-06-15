@@ -40,13 +40,16 @@ jsonlint will either report a syntax error with details or pretty print the sour
 
 ## Module interface
 
-I'm not sure why you wouldn't use the built in `JSON.parse` but you can use jsonlint from a CommonJS module:
+You can use jsonlint from a CommonJS module:
 
     var jsonlint = require("jsonlint");
 
     jsonlint.parse('{"creative?": false}');
 
 It returns the parsed object or throws an `Error`.
+
+While the same can be accomplished with JSON.parse, jsonlint will provide error
+friendlier error messages.
 
 ## Vim Plugins
 
