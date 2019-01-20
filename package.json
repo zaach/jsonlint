@@ -25,7 +25,7 @@
     "node": ">= 0.6"
   },
   "dependencies": {
-    "nomnom": "^1.5.x",
+    "@gerhobbelt/nomnom": "^1.8.4-27",
     "JSV": "^4.0.x"
   },
   "devDependencies": {
