@@ -3,7 +3,7 @@ JSON Lint
 
 A pure [JavaScript version](http://zaach.github.com/jsonlint/) of the service provided at [jsonlint.com](http://jsonlint.com).
 
-The command line interface included in this package just has limited features. For more useful features like multiple files (glob) support, see [a command line wraooer: jsonlint-cli](https://github.com/marionebl/jsonlint-cli).
+The command line interface included in this package just has limited features. For more useful features like multiple files (glob) support, see [a command line wrapper: jsonlint-cli](https://github.com/marionebl/jsonlint-cli).
 
 ## Command line interface
 Install jsonlint with npm to use the command line interface:
