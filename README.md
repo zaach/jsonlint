@@ -3,6 +3,8 @@ JSON Lint
 
 A pure [JavaScript version](http://zaach.github.com/jsonlint/) of the service provided at [jsonlint.com](http://jsonlint.com).
 
+This project is unmaintained and see [a successor project with some improvements: jsonlint-cli](https://github.com/marionebl/jsonlint-cli), if you need multiple files support or more.
+
 ## Command line interface
 Install jsonlint with npm to use the command line interface:
 
