@@ -1,0 +1,11 @@
+---
+
+# For use with pre-commit.
+# See usage instructions at http://pre-commit.com
+
+- id: jsonlint
+  name: jsonlint
+  description: This hook runs jsonlint
+  entry: bash -c 'for x in "$@"; do jsonlint --quiet --compact "$x"; done' --
+  language: node
+  files: '^.*\.json$'

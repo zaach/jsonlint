@@ -51,7 +51,18 @@ It returns the parsed object or throws an `Error`.
 ## Vim Plugins
 
 * [Syntastic](http://www.vim.org/scripts/script.php?script_id=2736)
-* [sourcebeautify](http://www.vim.org/scripts/script.php?script_id=4079) 
+* [sourcebeautify](http://www.vim.org/scripts/script.php?script_id=4079)
+
+## Usage with pre-commit
+
+**jsonlint** can be used as a hook for [pre-commit](https://pre-commit.com/) tool.
+The easiest way to get started is to add this configuration to your `.pre-commit-config.yaml`.
+
+    repos:
+      - repo: https://github.com/zaach/jsonlint
+        rev: master
+        hooks:
+          - id: jsonlint
 
 ## MIT License
 
