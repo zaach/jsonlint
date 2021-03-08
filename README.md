@@ -27,15 +27,16 @@ jsonlint will either report a syntax error with details or pretty print the sour
     file     file to parse; otherwise uses stdin
 
     Options:
-       -v, --version            print version and exit
-       -s, --sort-keys          sort object keys
-       -i, --in-place           overwrite the file
-       -t CHAR, --indent CHAR   character(s) to use for indentation  [  ]
-       -c, --compact            compact error display
-       -V, --validate           a JSON schema to use for validation
-       -e, --environment        which specification of JSON Schema the validation file uses  [json-schema-draft-03]
-       -q, --quiet              do not print the parsed json to STDOUT  [false]
-       -p, --pretty-print       force pretty printing even if invalid
+       -v, --version                print version and exit
+       -s, --sort-keys              sort object keys
+       -i, --in-place               overwrite the file
+       -t CHAR, --indent CHAR       character(s) to use for indentation  [  ]
+       -n, --insert-final-newline   ensure JSON string ends with a newline
+       -c, --compact                compact error display
+       -V, --validate               a JSON schema to use for validation
+       -e, --environment            which specification of JSON Schema the validation file uses  [json-schema-draft-03]
+       -q, --quiet                  do not print the parsed json to STDOUT  [false]
+       -p, --pretty-print           force pretty printing even if invalid
 
 
 ## Module interface

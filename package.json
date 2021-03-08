@@ -1,6 +1,6 @@
 {
   "author": "Zach Carter <zach@carter.name> (http://zaa.ch)",
-  "name": "jsonlint",
+  "name": "jsonlint-newline-fork",
   "description": "Validate JSON",
   "keywords": [
     "json",
@@ -12,10 +12,10 @@
   "preferGlobal": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/zaach/jsonlint.git"
+    "url": "git://github.com/kevcenteno/jsonlint.git"
   },
   "bugs": {
-    "url": "http://github.com/zaach/jsonlint/issues"
+    "url": "http://github.com/kevcenteno/jsonlint/issues"
   },
   "main": "lib/jsonlint.js",
   "bin": {
