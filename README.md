@@ -51,7 +51,8 @@ It returns the parsed object or throws an `Error`.
 ## Vim Plugins
 
 * [Syntastic](http://www.vim.org/scripts/script.php?script_id=2736)
-* [sourcebeautify](http://www.vim.org/scripts/script.php?script_id=4079) 
+* [sourcebeautify](http://www.vim.org/scripts/script.php?script_id=4079)
+* [ALE](https://github.com/w0rp/ale)
 
 ## MIT License
 
