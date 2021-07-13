@@ -10,13 +10,19 @@
 JSONString
     : STRING
         { // replace escaped characters with actual character
-          $$ = yytext.replace(/\\(\\|")/g, "$"+"1")
-                     .replace(/\\n/g,'\n')
-                     .replace(/\\r/g,'\r')
-                     .replace(/\\t/g,'\t')
-                     .replace(/\\v/g,'\v')
-                     .replace(/\\f/g,'\f')
-                     .replace(/\\b/g,'\b');
+	  $$ = yytext.replace(/\\([\"\\\/bfnrt]|u[0-9a-fA-f]{4})/g, function(match, part) {
+	      if(part.charAt(0) === 'u') {
+		return String.fromCharCode(parseInt(part.substr(1),16));
+	      }
+	      switch(part) {
+	      case 'b':return '\b';
+	      case 'f':return '\f';
+	      case 'n':return '\n';
+	      case 'r':return '\r';
+	      case 't':return '\t';
+	      case '"':case '\\':case '/':return part;
+	      }
+	    });
         }
     ;
 

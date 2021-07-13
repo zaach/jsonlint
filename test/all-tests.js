@@ -17,9 +17,19 @@ exports["test escaped chars"] = function () {
     assert.deepEqual(parser.parse(json), {"foo": '\\\"'});
 };
 
+exports["test all escaped characters"] = function () {
+    var json = '["\\u20AC","\\/","\\\\","\\b","\\f","\\n","\\r","\\t","\\\""]';
+    assert.deepEqual(parser.parse(json), ['\u20AC','\/','\\','\b','\f','\n','\r','\t','\"']);
+};
+
 exports["test escaped \\n"] = function () {
     var json = '{"foo": "\\\\\\n"}';
     assert.deepEqual(parser.parse(json), {"foo": '\\\n'});
+};
+
+exports["test escaped backslash does not get used to escape"] = function () {
+    var json = '{"foo": "\\\\n"}';
+    assert.deepEqual(parser.parse(json), {"foo": '\\n'});
 };
 
 exports["test string with escaped line break"] = function () {
