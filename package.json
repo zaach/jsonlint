@@ -1,6 +1,7 @@
 {
   "author": "Zach Carter <zach@carter.name> (http://zaa.ch)",
   "name": "jsonlint",
+  "license": "MIT",
   "description": "Validate JSON",
   "keywords": [
     "json",
