@@ -54,6 +54,13 @@ It returns the parsed object or throws an `Error`.
 * [sourcebeautify](http://www.vim.org/scripts/script.php?script_id=4079)
 * [ALE](https://github.com/w0rp/ale)
 
+## Continuous Integration
+
+* [Mega-Linter](https://nvuillam.github.io/mega-linter/)
+  * embeds more than 70 linters, including [jsonlint](https://nvuillam.github.io/mega-linter/descriptors/json_jsonlint/) by default in all its [flavors](https://nvuillam.github.io/mega-linter/flavors/), so any detected JSON file will be linted by jsonlint
+  * Runnable in CI as [GitHub Action and in other CI tools]((https://nvuillam.github.io/mega-linter/installation/))
+  * can can also be [run locally](https://nvuillam.github.io/mega-linter/mega-linter-runner/)
+
 ## MIT License
 
 Copyright (C) 2012 Zachary Carter
